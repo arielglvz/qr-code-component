@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --color-white : hsl(212, 45%, 89%);
+  --color-blue: hsl(218, 44%, 22%);
+  --color-gray: hsl(216, 15%, 48%);
+  --accent-color : hsl(212, 45%, 50%);;
+  --font-stack: 'Segoe UI', sans-serif;
+  --font-normal: 15px;
+  --font-400: 400;
+  --font-700: 700;
+
+  --device-mobile: 375px;
+  --device-desktop: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  min-width: var(--device-mobile);
+  max-width: var(--device-desktop);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-normal);
+  font-weight: var(--font-400);
+  font-family: var(--font-stack);
+  background-color: var(--color-white);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.qr-card {
+  max-width: 20rem;
+  height: max-content;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: -1px 5px 12px -6px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -1px 5px 12px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 5px 12px -6px rgba(0,0,0,0.75);
+}
+
+.card-wrapper {
+  padding: 1rem;
+}
+
+.text {
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+  color: var(--color-blue);
+  font-weight: var(--font-700);
+}
+
+p {
+  font-size: .9rem;
+  color: var(--color-gray);
+  font-weight: var(--font-400);
+}
+
+/* Styles for screens 1440px and wider (Desktop) */
+@media (min-width: 1440px) {
+  body {
+    margin: 0 auto;
+    padding: 40px;
+    min-width: 100%;
+    max-width: var(--device-desktop);
+    min-height: 100vh; 
+  }
+
+  .qr-card {
+    max-width: 23rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
